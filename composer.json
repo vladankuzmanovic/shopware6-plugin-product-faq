@@ -1,0 +1,18 @@
+{
+  "name": "kuzman/product-faq",
+  "description": "Shopware 6 product frequently asked questions",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "KuzmanProductFaq\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "KuzmanProductFaq\\KuzmanProductFaq",
+    "label": {
+      "de-DE": "Kuzman Product Faq",
+      "en-GB": "Kuzman Product Faq"
+    }
+  }
+}
