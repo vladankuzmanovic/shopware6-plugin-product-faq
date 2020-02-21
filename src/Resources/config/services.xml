@@ -8,5 +8,11 @@
         <service id="KuzmanProductFaq\Core\Content\ProductFaq\ProductFaqDefinition">
             <tag name="shopware.entity.definition" entity="kuzman_product_faq" />
         </service>
+        <service id="KuzmanProductFaq\Core\Api\DemoDataController" public="true">
+            <argument id="kuzman_product_faq.repository" type="service" />
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>
     </services>
 </container>
