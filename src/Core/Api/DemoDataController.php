@@ -40,11 +40,11 @@ class DemoDataController extends AbstractController
             $data[] = [
                 'id' => Uuid::randomHex(),
                 'active' => true,
-                'email' => '$faker->email',
-                'nickname' => '$faker->name',
-                'question' => '$faker->sentences',
-                'answer' => '$faker->sentences',
-                'product' => '$faker->randomAscii'
+                'email' => $faker->email,
+                'nickname' => $faker->name,
+                'question' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+                'answer' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+                'products' => $faker->word
             ];
         }
 
