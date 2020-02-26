@@ -27,7 +27,7 @@ class DemoDataController extends AbstractController
     }
 
     /**
-     * @Route("/api/v{version}/_action/kuzman_product_faq/generate", name="api.custom.kuman_product_faq.generate", methods={"POST"})
+     * @Route("/api/v{version}/_action/kuzman-product-faq/generate", name="api.custom.kuzman_product_faq.generate", methods={"POST"})
      * @param Context $context
      *
      * @return Response
@@ -40,11 +40,11 @@ class DemoDataController extends AbstractController
             $data[] = [
                 'id' => Uuid::randomHex(),
                 'active' => true,
-                'email' => $faker->email,
-                'nickname' => $faker->name,
-                'question' => $faker->sentences,
-                'answer' => $faker->sentences,
-                'product' => $faker->randomAscii
+                'email' => '$faker->email',
+                'nickname' => '$faker->name',
+                'question' => '$faker->sentences',
+                'answer' => '$faker->sentences',
+                'product' => '$faker->randomAscii'
             ];
         }
 
