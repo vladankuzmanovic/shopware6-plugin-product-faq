@@ -57,7 +57,8 @@ class ProductDetailSubscriber implements EventSubscriberInterface
             return;
         }
 
-        $productFaqs = $this->fetchFaqs($event->getContext());
+        $currentProduct = $event->getPage()->getProduct()->getProductNumber();
+        $productFaqs = $this->fetchFaqs($event->getContext(), $currentProduct);
         $event->getPage()->addExtension('kuzman_product_faq', $productFaqs);
     }
 
@@ -65,14 +66,18 @@ class ProductDetailSubscriber implements EventSubscriberInterface
      * Returns product frequently asked question records by certan criteria
      *
      * @param Context $context
+     * @param $currentProduct
      *
      * @return ProductFaqCollection
      * @throws \Shopware\Core\Framework\DataAbstractionLayer\Exception\InconsistentCriteriaIdsException
      */
-    private function fetchFaqs(Context $context): ProductFaqCollection
+    private function fetchFaqs(Context $context, $currentProduct): ProductFaqCollection
     {
         $criteria = new Criteria();
+
         $criteria->addFilter(new EqualsFilter('active', '1'));
+        $criteria->addFilter(new EqualsFilter('product_number', $currentProduct));
+
         $criteria->setLimit(5);
 
         /** @var  ProductFaqCollection $productFaqCollection */

@@ -37,7 +37,7 @@ class ProductFaqEntity extends Entity
     /**
      * @var string|null
      */
-    protected $products;
+    protected $productNumber;
 
     /**
      * @return bool
@@ -122,16 +122,16 @@ class ProductFaqEntity extends Entity
     /**
      * @return string|null
      */
-    public function getProducts(): ?string
+    public function getProductNumber(): ?string
     {
-        return $this->products;
+        return $this->productNumber;
     }
 
     /**
-     * @param string|null $products
+     * @param string|null $productNumber
      */
-    public function setProducts(?string $products): void
+    public function setProductNumber(?string $productNumber): void
     {
-        $this->products = $products;
+        $this->productNumber = $productNumber;
     }
 }

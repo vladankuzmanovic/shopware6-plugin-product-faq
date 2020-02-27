@@ -21,7 +21,7 @@ class Migration1581688006 extends MigrationStep
             `nickname`      VARCHAR(255) NOT NULL,
             `question`      LONGTEXT NOT NULL,
             `answer`        LONGTEXT NULL,
-            `products`      VARCHAR(255) NULL,
+            `product_number`      VARCHAR(255) NULL,
             `created_at`    DATETIME(3),
             `updated_at`    DATETIME(3),
             PRIMARY KEY (`id`)

@@ -37,7 +37,7 @@ class ProductFaqDefinition extends EntityDefinition
          * StringField nickname
          * LongTextField question
          * LongTextField answer
-         * StringField products
+         * StringField product_number
          *
          * required: active email active nickname question
          */
@@ -49,7 +49,7 @@ class ProductFaqDefinition extends EntityDefinition
                 (new StringField('nickname', 'nickname'))->addFlags(new Required()),
                 (new LongTextField('question', 'question'))->addFlags(new Required()),
                 new LongTextField('answer', 'answer'),
-                new StringField('products', 'products')
+                new StringField('product_number', 'product_number')
             ]
         );
     }

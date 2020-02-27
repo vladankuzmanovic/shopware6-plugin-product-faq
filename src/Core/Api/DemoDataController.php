@@ -44,7 +44,7 @@ class DemoDataController extends AbstractController
                 'nickname' => $faker->name,
                 'question' => $faker->sentence($nbWords = 6, $variableNbWords = true),
                 'answer' => $faker->sentence($nbWords = 6, $variableNbWords = true),
-                'products' => $faker->word
+                'product_number' => $faker->word
             ];
         }
 
