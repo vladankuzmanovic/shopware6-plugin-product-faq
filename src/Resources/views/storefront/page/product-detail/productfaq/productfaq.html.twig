@@ -1,14 +1,14 @@
 <div class = "product-detail-review-teaser js-review-teaser">
     {% if page.extensions.kuzman_product_faq.elements %}
-        <p class="h4"> Frequenly Asked Questions</p>
+        <p class="h4">{{ 'kuzman_product_faq.tabTitle'|trans }}</p>
         {% for faq in kuzman_product_faq.elements %}
             <div>
-                Nickname: {{ faq.nickname }}<br>
-                Question: {{ faq.question }}<br>
-                Answer: {{ faq.answer }}<br><br>
+                {{ 'kuzman_product_faq.nickname'|trans }}: {{ faq.nickname }}<br>
+                {{ 'kuzman_product_faq.question'|trans }}: {{ faq.question }}<br>
+                {{ 'kuzman_product_faq.answer'|trans }}: {{ faq.answer }}<br><br>
             </div>
         {% endfor %}
     {% else %}
-        <p class="h4"> Currently there is no Frequenly Asked Questions </p>
+        <p class="h4">{{ 'kuzman_product_faq.noFaqText'|trans }}</p>
     {% endif %}
 </div>

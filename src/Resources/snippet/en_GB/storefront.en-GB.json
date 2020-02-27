@@ -1,0 +1,9 @@
+{
+    "kuzman_product_faq": {
+        "tabTitle": "Frequently Asked Questions",
+        "nickname": "Nickname",
+        "question": "Question",
+        "answer": "Answer",
+        "noFaqText": "Currently there is no FAQ"
+    }
+}

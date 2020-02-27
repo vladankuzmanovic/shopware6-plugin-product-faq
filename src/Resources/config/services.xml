@@ -19,6 +19,8 @@
             <argument id="kuzman_product_faq.repository" type="service" />
             <tag name="kernel.event_subscriber"/>
         </service>
-
+        <service id="KuzmanProductFaq\Resources\snippet\en_GB\SnippetFile_en_GB">
+            <tag name="shopware.snippet.file" />
+        </service>
     </services>
 </container>
