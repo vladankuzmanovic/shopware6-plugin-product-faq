@@ -10,7 +10,7 @@
             role="tab"
             aria-controls="productfaq-tab-pane"
             aria-selected="true">
-              Faq
+              Frequently asked questions
             <span class="product-detail-tab-navigation-icon">
                 {% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
             </span>
@@ -25,11 +25,9 @@
          id="productfaq-tab-pane"
          role="tabpanel"
          aria-labelledby="productfaq-tab">
-         {% if page.extensions.kuzman_product_faq %}
          {% sw_include '@Storefront/storefront/page/product-detail/productfaq/productfaq.html.twig'  with {
              'kuzman_product_faq': page.extensions.kuzman_product_faq
          } %}
-         {% endif %}
      </div>
  {% endblock %}
 

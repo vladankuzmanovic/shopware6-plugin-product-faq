@@ -1,10 +1,14 @@
 <div class = "product-detail-review-teaser js-review-teaser">
-    <p class="h4"> Frequenly Asked Questions</p>
-    {% for faq in kuzman_product_faq.elements %}
-    <div>
-        Nickname: {{ faq.nickname }}<br>
-        Question: {{ faq.question }}<br>
-        Answer: {{ faq.answer }}<br><br>
-    </div>
-    {% endfor %}
+    {% if page.extensions.kuzman_product_faq.elements %}
+        <p class="h4"> Frequenly Asked Questions</p>
+        {% for faq in kuzman_product_faq.elements %}
+            <div>
+                Nickname: {{ faq.nickname }}<br>
+                Question: {{ faq.question }}<br>
+                Answer: {{ faq.answer }}<br><br>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="h4"> Currently there is no Frequenly Asked Questions </p>
+    {% endif %}
 </div>
