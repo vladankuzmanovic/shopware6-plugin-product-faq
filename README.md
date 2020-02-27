@@ -1,5 +1,7 @@
 # Summary
-Shopware 6 plugin that will allow customers to view common FAQ’s based on the product they are viewing. If they don’t see what they are looking for, they can submit a question via a form which can be approved and answered by the admin.
+- Shopware 6 plugin allows customers to view FAQ’s based on the product they are viewing.  
+- The product FAQ will be shown on the product detail page tab.
+
 
 # Installation
    ```
@@ -7,3 +9,5 @@ Shopware 6 plugin that will allow customers to view common FAQ’s based on the 
   # composer require kuzman/product-faq:dev-master
   ```
   
+# Configuration
+Show in storefront > enable/disable
