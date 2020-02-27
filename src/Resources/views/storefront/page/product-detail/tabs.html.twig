@@ -1,0 +1,35 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+{% block page_product_detail_tabs_navigation_review %}
+    {{ parent() }}
+    <li class="nav-item">
+        <a class="nav-link {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %} product-detail-tab-navigation-link"
+            id="producfaq-tab"
+            data-toggle="tab"
+            data-offcanvas-tabs="true"
+            href="#productfaq-tab-pane"
+            role="tab"
+            aria-controls="productfaq-tab-pane"
+            aria-selected="true">
+              Faq
+            <span class="product-detail-tab-navigation-icon">
+                {% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
+            </span>
+        </a>
+    </li>
+{#    {{ dump() }}#}
+{% endblock %}
+
+ {% block page_product_detail_tabs_content_review %}
+     {{ parent() }}
+     <div class="tab-pane fade show {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %}"
+         id="productfaq-tab-pane"
+         role="tabpanel"
+         aria-labelledby="productfaq-tab">
+         {% if page.extensions.kuzman_product_faq %}
+         {% sw_include '@Storefront/storefront/page/product-detail/productfaq/productfaq.html.twig'  with {
+             'kuzman_product_faq': page.extensions.kuzman_product_faq
+         } %}
+         {% endif %}
+     </div>
+ {% endblock %}
+

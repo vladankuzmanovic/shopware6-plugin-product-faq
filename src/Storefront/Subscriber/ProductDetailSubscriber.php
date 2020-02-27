@@ -53,12 +53,11 @@ class ProductDetailSubscriber implements EventSubscriberInterface
      */
     public function onProductPageLoaded(ProductPageLoadedEvent $event): void
     {
-        if(!$this->systemConfigService->get('KuzmanProductFaq.config.showInStorefront')) {
+        if(!$this->systemConfigService->get('KuzmanProductFaq.config.showInStoreFront')) {
             return;
         }
 
         $productFaqs = $this->fetchFaqs($event->getContext());
-
         $event->getPage()->addExtension('kuzman_product_faq', $productFaqs);
     }
 
