@@ -14,5 +14,11 @@
                 <argument type="service" id="service_container" />
             </call>
         </service>
+        <service id="KuzmanProductFaq\Storefront\Subscriber\ProductDetailSubscriber">
+            <argument id="Shopware\Core\System\SystemConfig\SystemConfigService" type="service"/>
+            <argument id="kuzman_product_faq.repository" type="service" />
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
     </services>
 </container>
